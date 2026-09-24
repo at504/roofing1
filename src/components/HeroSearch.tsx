@@ -3,6 +3,7 @@ import { Phone, Shield, Calendar, ArrowRight, CheckCircle2, Calculator, Clock, S
 import { SERVICES_DATA } from '../data/servicesData';
 import { LOCATIONS_DATA } from '../data/locationsData';
 import { BUSINESS_NAP } from '../data/siteData';
+import heroRooferImg from '../assets/images/hero_roofer_toms_river_1790236081328.jpg';
 
 interface HeroSearchProps {
   onSearch?: (locationSlug: string, serviceSlug: string) => void;
@@ -13,7 +14,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ onOpenQuote }) => {
   // Interactive Live Estimator State
   const [selectedServiceType, setSelectedServiceType] = useState<'replacement' | 'repair' | 'metal' | 'emergency'>('replacement');
   const [selectedHomeSize, setSelectedHomeSize] = useState<'1500' | '2500' | '3500'>('2500');
-  const [activeTab, setActiveTab] = useState<'estimator' | 'proof'>('estimator');
+  const [activeTab, setActiveTab] = useState<'proof' | 'estimator'>('proof');
 
   // Dynamic estimate calculation
   const getEstimateData = () => {
@@ -58,6 +59,16 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ onOpenQuote }) => {
 
   return (
     <section className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden border-b border-slate-800">
+      {/* Authentic Roofing Project Background Photo with Gradient Fade */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
+        <img
+          src={heroRooferImg}
+          alt=""
+          className="w-full h-full object-cover filter saturate-150 scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-slate-950/80" />
+      </div>
+
       {/* Subtle Background Glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-0" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -z-0" />
@@ -161,6 +172,16 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ onOpenQuote }) => {
                 {/* Mode Selector */}
                 <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs font-semibold">
                   <button
+                    onClick={() => setActiveTab('proof')}
+                    className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
+                      activeTab === 'proof'
+                        ? 'bg-amber-400 text-slate-950 font-bold shadow-xs'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Toms River Crew (Active)
+                  </button>
+                  <button
                     onClick={() => setActiveTab('estimator')}
                     className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
                       activeTab === 'estimator'
@@ -169,16 +190,6 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ onOpenQuote }) => {
                     }`}
                   >
                     Quick Estimator
-                  </button>
-                  <button
-                    onClick={() => setActiveTab('proof')}
-                    className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
-                      activeTab === 'proof'
-                        ? 'bg-amber-400 text-slate-950 font-bold shadow-xs'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    Toms River Crew
                   </button>
                 </div>
               </div>
@@ -279,9 +290,12 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ onOpenQuote }) => {
                 <div className="pt-5 space-y-4">
                   <div className="relative rounded-2xl overflow-hidden aspect-[16/10] bg-slate-950 border border-slate-800">
                     <img
-                      src="/src/assets/images/hero_roofer_toms_river_1790236081328.jpg"
+                      src={heroRooferImg}
                       alt="Certified Master Roofer on roof in Toms River NJ"
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=80';
+                      }}
                     />
                     <div className="absolute top-3 left-3 bg-slate-950/90 backdrop-blur-md px-3 py-1 rounded-lg border border-slate-700 text-xs text-amber-400 font-bold flex items-center gap-1.5">
                       <Shield className="w-3.5 h-3.5" />

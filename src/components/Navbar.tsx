@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Shield, Menu, X, ArrowRight, Award, FileCode, CheckCircle2, Download } from 'lucide-react';
+import { Phone, Shield, Menu, X, ArrowRight, Award, FileCode, CheckCircle2 } from 'lucide-react';
 import { BUSINESS_NAP } from '../data/siteData';
 
 interface NavbarProps {
@@ -114,17 +114,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate, onOpenQu
             >
               Contact
             </button>
-            <button
-              onClick={() => handleNav('theme-zip')}
-              className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 ${
-                currentTab === 'theme-zip'
-                  ? 'bg-amber-400 text-slate-950 font-black'
-                  : 'bg-emerald-100 text-emerald-950 hover:bg-emerald-200 border border-emerald-300'
-              }`}
-            >
-              <Download className="w-3.5 h-3.5 text-emerald-800" />
-              <span>Export HTML / WP (.ZIP)</span>
-            </button>
           </nav>
 
           {/* Right Action: Phone + Get a Quote Button */}
@@ -204,12 +193,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate, onOpenQu
               className="block w-full text-left py-2 px-3 rounded-lg font-bold text-slate-800 hover:bg-slate-100"
             >
               Contact Us
-            </button>
-            <button
-              onClick={() => handleNav('theme-zip')}
-              className="block w-full text-left py-2 px-3 rounded-lg font-bold bg-amber-50 text-amber-900 border border-amber-200"
-            >
-              WordPress Theme ZIP Package
             </button>
             <div className="pt-2 border-t border-slate-100">
               <a

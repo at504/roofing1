@@ -1,6 +1,8 @@
 import React from 'react';
 import { ShieldCheck, Award, DollarSign, CheckCircle2, Phone, Star, Wrench, Shield } from 'lucide-react';
 import { BUSINESS_NAP } from '../data/siteData';
+import heroRooferImg from '../assets/images/hero_roofer_toms_river_1790236081328.jpg';
+import inspectionImg from '../assets/images/roof_inspection_diagnostic_1790236126633.jpg';
 
 interface WhyChooseUsProps {
   onOpenQuote: () => void;
@@ -44,18 +46,24 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenQuote }) => {
               {/* Main Circular Image */}
               <div className="absolute inset-4 rounded-full overflow-hidden shadow-2xl border-4 border-slate-800 bg-slate-900">
                 <img
-                  src="/src/assets/images/hero_roofer_toms_river_1790236081328.jpg"
+                  src={heroRooferImg}
                   alt="Certified Toms River roofer inspecting shingle roof"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
               </div>
 
               {/* Smaller floating circular badge top right */}
               <div className="absolute -top-3 -right-3 w-28 h-28 rounded-full overflow-hidden border-4 border-slate-800 shadow-xl bg-slate-900 hidden sm:block">
                 <img
-                  src="/src/assets/images/roof_inspection_diagnostic_1790236126633.jpg"
+                  src={inspectionImg}
                   alt="Roof diagnostic inspection in Toms River"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
               </div>
 

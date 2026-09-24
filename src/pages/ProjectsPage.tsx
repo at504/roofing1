@@ -82,6 +82,9 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenQu
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80';
+                    }}
                   />
                   <div className="absolute top-3 left-3 w-8 h-8 rounded-lg bg-slate-950/90 text-amber-400 font-black text-xs flex items-center justify-center border border-slate-700 shadow-md">
                     {project.numberBadge}

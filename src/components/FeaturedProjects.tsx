@@ -58,6 +58,9 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
 
                 {/* Number Badge (01-04) */}

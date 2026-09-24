@@ -1,4 +1,8 @@
 import { ProjectItem } from './siteData';
+import residentialImg from '../assets/images/featured_project_residential_1790236138317.jpg';
+import metalShoreImg from '../assets/images/featured_project_metal_shore_1790236150693.jpg';
+import inspectionImg from '../assets/images/roof_inspection_diagnostic_1790236126633.jpg';
+import heroRooferImg from '../assets/images/hero_roofer_toms_river_1790236081328.jpg';
 
 export const PROJECTS_DATA: ProjectItem[] = [
   {
@@ -14,7 +18,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 48,
     reviewText: "Roofers Toms River completely transformed our 25-year-old Colonial. The GAF Charcoal shingles look stunning, and they completed the full tear-off and installation in just 1.5 days. Outstanding cleanup!",
     clientName: "Mark & Donna Sullivan",
-    image: "/src/assets/images/featured_project_residential_1790236138317.jpg",
+    image: residentialImg,
     serviceSlug: "roof-replacement-toms-river",
     locationSlug: "toms-river-roofing"
   },
@@ -31,7 +35,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 36,
     reviewText: "Living right on the river, coastal winds were destroying our shingles. This standing seam aluminum roof has zero exposed screws, handles 120-mph gusts, and looks like architectural art.",
     clientName: "Capt. Richard Hayes",
-    image: "/src/assets/images/featured_project_metal_shore_1790236150693.jpg",
+    image: metalShoreImg,
     serviceSlug: "metal-roofing-toms-river",
     locationSlug: "pine-beach-roofing"
   },
@@ -48,7 +52,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 52,
     reviewText: "High nor'easter winds ripped 40 shingles and cracked two sheets of plywood. Roofers Toms River tarped our roof within 45 minutes, handled the entire insurance claim, and replaced the roof seamlessly.",
     clientName: "Steven & Nancy Peterson",
-    image: "/src/assets/images/roof_inspection_diagnostic_1790236126633.jpg",
+    image: inspectionImg,
     serviceSlug: "storm-damage-roof-repair-toms-river",
     locationSlug: "brick-roofing"
   },
@@ -65,7 +69,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 29,
     reviewText: "True master craftsmanship. They preserved our 1895 Victorian's historic character, custom-bent copper valley flashing on site, and gave us a lifetime waterproof roof.",
     clientName: "Claire & Thomas Bradley",
-    image: "/src/assets/images/hero_roofer_toms_river_1790236081328.jpg",
+    image: heroRooferImg,
     serviceSlug: "shingle-roofing-toms-river",
     locationSlug: "island-heights-roofing"
   },
@@ -82,7 +86,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 31,
     reviewText: "Replaced our chronic leaking gravel roof with high-efficiency white TPO and tapered Polyiso insulation. Zero leaks through two nor'easters, and our AC cooling bills plummeted.",
     clientName: "Apex Retail Management LLC",
-    image: "/src/assets/images/featured_project_residential_1790236138317.jpg",
+    image: residentialImg,
     serviceSlug: "commercial-roofing-toms-river",
     locationSlug: "toms-river-roofing"
   },
@@ -99,7 +103,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 64,
     reviewText: "Respectful, quiet, and exceptionally fast. They finished the job in one day, did three magnetic sweeps for nails so our dogs were safe, and honored their senior discount without hassle.",
     clientName: "Arthur & Patricia Miller",
-    image: "/src/assets/images/hero_roofer_toms_river_1790236081328.jpg",
+    image: heroRooferImg,
     serviceSlug: "residential-roofing-toms-river",
     locationSlug: "manchester-township-roofing"
   },
@@ -116,7 +120,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 42,
     reviewText: "Salt air had rusted the nails on our beach duplex roof. Roofers Toms River used stainless steel fasteners and 6 nails per shingle. Done right on schedule before our Memorial Day rentals.",
     clientName: "Sal & Maria Castellano",
-    image: "/src/assets/images/featured_project_metal_shore_1790236150693.jpg",
+    image: metalShoreImg,
     serviceSlug: "roof-replacement-toms-river",
     locationSlug: "seaside-heights-roofing"
   },
@@ -133,7 +137,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     reviewCount: 38,
     reviewText: "Our pitch pine trees were dumping needles that rotted our valleys. The new roof and micro-mesh gutter system completely solved our water issues. Highly recommended!",
     clientName: "Gary Miller",
-    image: "/src/assets/images/roof_inspection_diagnostic_1790236126633.jpg",
+    image: inspectionImg,
     serviceSlug: "gutter-installation-repair-toms-river",
     locationSlug: "beachwood-roofing"
   }

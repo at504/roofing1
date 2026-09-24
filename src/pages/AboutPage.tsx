@@ -2,6 +2,7 @@ import React from 'react';
 import { BUSINESS_NAP } from '../data/siteData';
 import { Award, ShieldCheck, Users, MapPin, Phone, CheckCircle2, Star, Clock } from 'lucide-react';
 import { CtaStrip } from '../components/CtaStrip';
+import residentialImg from '../assets/images/featured_project_residential_1790236138317.jpg';
 
 interface AboutPageProps {
   onOpenQuote: () => void;
@@ -73,9 +74,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuote }) => {
             <div className="lg:col-span-5 relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 aspect-[4/3]">
                 <img
-                  src="/src/assets/images/featured_project_residential_1790236138317.jpg"
+                  src={residentialImg}
                   alt="Roofers Toms River crew project"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-slate-950 text-white p-6 rounded-2xl shadow-xl border border-slate-800 max-w-xs">
