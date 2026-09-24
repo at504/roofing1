@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy: #0F172A;
+    --brand-navy-light: #1E293B;
+    --brand-gold: #D4AF37;
+    --brand-gold-hover: #B89726;
+    --brand-amber: #F59E0B;
+    --brand-bg-light: #F8FAFC;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #1E293B;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cabinet Grotesk', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+::selection {
+  background-color: #D4AF37;
+  color: #0F172A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
